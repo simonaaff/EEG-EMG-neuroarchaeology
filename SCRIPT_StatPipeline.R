@@ -58,7 +58,7 @@ names(WilcZscore)<-colnames(task1_clean)
 Wilc_table<-data.frame("Z-score"=WilcZscore,"p-value"=WilcPvalue)
 write.table(Wilc_table,"Wilc_table.csv",sep=";",dec=",",col.names=NA) #Save results to a CSV file
 
-# Extract channels with significant p-values (??? 0.05)
+# Extract channels with significant p-values ( 0.05)
 sel<-which(Wilc_table$p.value<=0.05)
 colnames(task1)[sel]
 
